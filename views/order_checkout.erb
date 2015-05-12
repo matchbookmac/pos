@@ -1,0 +1,12 @@
+<h1 class="page-header text-center">Your order confirmation & total!</h1>
+<div id="order" class="box">
+<p class='lead'> Your order total is $<%= @cost %> and includes:
+  <ul>
+    <% @ordered_antiques.each() do |antique| %>
+    <li><%= antique.description() %></li>
+    <% end %>
+  </ul>
+
+</p>
+
+</div>

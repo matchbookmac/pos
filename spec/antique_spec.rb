@@ -11,6 +11,7 @@ describe(Antique) do
   it('ensures the length of description is at most 25 characters') do
     antique = Antique.new(description: "a".*(30))
     expect(antique.save()).to(eq(false))
+
   end
 
   it('ensures the cost of item is at non-negative') do

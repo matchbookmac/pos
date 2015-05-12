@@ -14,19 +14,14 @@ body {
   height: 100%;
 }
 
-
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
+#order,
+.lead {
+  color: #046380;
+  font-weight: bold;
 }
 
-/* Set the fixed height of the footer here */
-#footer {
-  height: 60px;
-  background-color: #d3d3d3;
+.box {
+  background-color: #ffffff;
+  opacity: 0.6;
+  width: 50%;
 }

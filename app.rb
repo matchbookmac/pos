@@ -54,3 +54,18 @@ delete '/antiques/:id' do
   @antique.destroy
   redirect to('antiques')
 end
+
+get '/orders/new' do
+  erb(:order_form)
+end
+
+post '/orders/checkout' do
+  @order = Order.create(purchase_date: Time.now)
+  @ordered_antiques = Antique.find(params['antique_id'])
+  @cost = 0
+  @ordered_antiques.each do |antique|
+    antique.update(purchased: true, order_id: @order.id)
+    @cost += antique.cost
+  end
+  erb(:order_checkout)
+end

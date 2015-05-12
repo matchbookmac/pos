@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1 class="text-center">Purchase Items from Jim Joe's</h1>
+  <a href="/">Home</a>
+</div>
+
+<form action="/orders/checkout" method="post">
+  <div class="form-group">
+    <ul>
+      <% @antiques.inventory.each do |antique| %>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="<%= antique.id %>" name="antique_id[]" value="<%= antique.id %>"><%= antique.description %></input>
+          </label>
+        </div>
+      <% end %>
+    </ul>
+    <button type="submit" class="btn btn-primary">Add Items to Order</button>
+  </div>
+</form>
+
+<a href="/orders" class="btn btn-danger" role="button">Cancel</a>
