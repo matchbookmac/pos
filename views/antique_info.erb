@@ -4,17 +4,34 @@
 </div>
 
 <h3>Cost: $<%= @antique.cost %></h3>
-
-<form action="/antiques/<%= @antique.id %>" method="post">
-  <input type="hidden" name="_method" value="patch">
-  <div class="form-group">
-    <label for="description">Update item Name</label>
-    <input type="text" name="description" class="form-control" required>
+<div class="row">
+  <div class="col-md-4">
+    <form action="/antiques/<%= @antique.id %>" method="post">
+      <input type="hidden" name="_method" value="patch">
+      <div class="form-group">
+        <label for="cost">Update item Cost</label>
+        <input type="number" name="cost" step="any" class="form-control" required>
+      </div>
+      <button name="change_description" type="submit" class="btn btn-primary">Update Cost</button>
+    </form>
   </div>
-  <button name="change_description" type="submit" class="btn btn-primary">Update Name</button>
-</form>
+  <div class="col-md-4">
+    <form action="/antiques/<%= @antique.id %>" method="post">
+      <input type="hidden" name="_method" value="patch">
+      <div class="form-group">
+        <label for="description">Update item Name</label>
+        <input type="text" name="description" class="form-control" required>
+      </div>
+      <button name="change_description" type="submit" class="btn btn-primary">Update Name</button>
+    </form>
+  </div>
+</div>
 <br>
-<form action="/antiques/<%= @antique.id %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <button name="destroy" class="btn btn-danger">Delete Antique</button>
-</form>
+<div class="row">
+  <div class="col-md-4">
+    <form action="/antiques/<%= @antique.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button name="destroy" class="btn btn-danger">Delete Antique</button>
+    </form>
+  </div>
+</div>

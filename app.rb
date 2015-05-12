@@ -42,3 +42,15 @@ get '/antiques/:id' do
   @antique = Antique.find(params.fetch('id').to_i)
   erb(:antique_info)
 end
+
+patch '/antiques/:id' do
+  @antique = Antique.find(params['id'])
+  @antique.update(description: params.fetch('description', @antique.description), cost: params.fetch('cost', @antique.cost))
+  erb(:antique_info)
+end
+
+delete '/antiques/:id' do
+  @antique = Antique.find(params['id'])
+  @antique.destroy
+  redirect to('antiques')
+end
