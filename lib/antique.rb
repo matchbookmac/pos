@@ -1,0 +1,1 @@
+class Antique < ActiveRecord::Base
