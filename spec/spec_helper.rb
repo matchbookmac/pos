@@ -5,6 +5,7 @@ require 'rspec'
 require 'pg'
 require 'order'
 require 'antique'
+require './app.rb'
 require 'pry'
 
 
