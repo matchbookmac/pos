@@ -1,14 +1,20 @@
-<div class="box">
-  <% total_sales = 0 %>
-  <% @orders.each() do |order| %>
-    <% total_sales += order.cost %>
-    <p class="lead">Order ID: <%= order.id %><p>
-    <p class="lead">Order Cost: $<%= order.cost %><p>
-    <ul>
-      <% order.antiques.each do |antique| %>
-        <li><%= antique.description() %>, $<%= antique.cost %></li>
-      <% end %>
-    </ul>
-  <% end %>
-  <p class="lead">Total Sales for this timeperiod: $<%= total_sales %></p>
-</div>
+
+<h1 class='page-header text-center'>Order Results</h1>
+<a href="/">Home</a>
+<% total_sales = 0 %>
+<% @orders.each() do |order| %>
+  <% total_sales += order.cost %>
+  <div class="border">
+    <div class="box">
+      <p class="lead">Order ID: <%= order.id %><p>
+      <p class="lead">Order Cost: $<%= order.cost %><p>
+      <ul>
+        <% order.antiques.each do |antique| %>
+          <li><%= antique.description() %>, $<%= antique.cost %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <br>
+<% end %>
+<p class="lead">Total Sales for this timeperiod: $<%= total_sales %></p>

@@ -1,12 +1,17 @@
+
 <h1 class="page-header text-center">Your order confirmation & total!</h1>
+<a href="/">Home</a>
+<br>
 <div id="order" class="box">
-<p class='lead'> Your order total is $<%= @cost %> and includes:
-  <ul>
-    <% @ordered_antiques.each() do |antique| %>
-    <li><%= antique.description() %></li>
-    <% end %>
-  </ul>
-
-</p>
-
+  <p class='lead'> Your order total is $<%= @cost %> and includes:
+    <ul>
+      <% @ordered_antiques.each() do |antique| %>
+      <li><%= antique.description() %></li>
+      <% end %>
+    </ul>
+  </p>
 </div>
+<a href="/antiques" class="btn btn-default" role="button">Add and View Inventory</a>
+<a href="/orders/new" class="btn btn-default" role="button">Create a New Order</a>
+<a href="/orders/find" class="btn btn-default" role="button">Sales by Date</a>
+<a href="/orders" class="btn btn-default" role="button">View Orders</a>
