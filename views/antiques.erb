@@ -7,7 +7,7 @@
 <p class= "lead"> Here is a list of our current antiques for sale:
   <ul>
     <% @antiques.inventory.each() do |antique| %>
-    <li><a href="/antiques/<%= antique.id %>"></a> <%= antique.description %> </li>
+    <li><a href="/antiques/<%= antique.id %>"><%= antique.description %></a>  </li>
     <% end %>
   </ul>
 </p>
