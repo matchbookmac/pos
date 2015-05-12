@@ -1,0 +1,10 @@
+<h1 class="page-header text-center">These are not the errors you are looking for</h1>
+
+<ul>
+  <% @antique.errors().full_messages().each() do |message| %>
+  <li><%= message %></li>
+  <% end %>
+</ul>
+
+
+<a href="/antiques" class="btn btn-default" role="button">Return to Inventory page</a>
