@@ -69,3 +69,14 @@ post '/orders/checkout' do
   end
   erb(:order_checkout)
 end
+
+get '/orders/find' do
+  erb(:order_find)
+end
+
+post '/orders/find/results' do
+  start_date = params['start_date']
+  end_date = params['end_date']
+  @orders = Order.find_orders(start_date, end_date)
+  erb(:order_results)
+end

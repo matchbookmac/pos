@@ -7,4 +7,3 @@ test:
   adapter: postgresql
   database: pos_test
   template: template0
-  
