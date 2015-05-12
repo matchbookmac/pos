@@ -80,3 +80,12 @@ post '/orders/find/results' do
   @orders = Order.find_orders(start_date, end_date)
   erb(:order_results)
 end
+
+get '/orders' do
+  erb(:orders)
+end
+
+get '/orders/:id' do
+  @order = Order.find(params['id'])
+  erb(:order)
+end

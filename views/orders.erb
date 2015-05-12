@@ -1,0 +1,11 @@
+<h1 class="page-header text-center">Orders page </h1>
+
+<p class="lead"> Here are all the orders that have been placed:
+  <ul>
+    <% @orders.each() do |order| %>
+
+    <li><a href="/orders/<%= order.id %>"><%= order.id %></a></li>
+    <% end %>
+  </ul>
+
+</p>

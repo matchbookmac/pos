@@ -1,0 +1,13 @@
+<div class="page-header">
+  <h1 class="text-center">Order <%= @order.id %></h1>
+  <a href="/">Home</a>
+</div>
+
+<div class="box">
+  <p class="lead">Order Cost: $<%= @order.cost %><p>
+  <ul>
+    <% @order.antiques.each do |antique| %>
+      <li><%= antique.description() %>, $<%= antique.cost %></li>
+    <% end %>
+  </ul>
+</div>
