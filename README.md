@@ -24,7 +24,7 @@ This app was written in `ruby '2.0.0'`.
 
 Clone this repo with
 ```console
-> git clone https://github.com/matchbookmac/<REPO NAME>.git
+> git clone https://github.com/matchbookmac/pos.git
 ```
 
 Install gems:
